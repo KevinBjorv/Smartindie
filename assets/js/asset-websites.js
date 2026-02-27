@@ -113,12 +113,12 @@ const renderCards = (sites, categoryData) => {
       image.classList.add('has-banner');
       image.style.setProperty(
         '--banner-image',
-        `url('/assets/assetWebsites/${bannerFile}')`
+        `url('/assets/images/asset-websites/${bannerFile}')`
       );
 
       const bannerImg = document.createElement('img');
       bannerImg.className = 'asset-banner-image';
-      bannerImg.src = `/assets/assetWebsites/${bannerFile}`;
+      bannerImg.src = `/assets/images/asset-websites/${bannerFile}`;
       bannerImg.alt = `${site.name} banner`;
       image.appendChild(bannerImg);
 
