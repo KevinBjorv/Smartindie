@@ -233,9 +233,6 @@
     <image:image>
       <image:loc>https://smartindie.dev/assets/images/misc/social-placeholder.svg</image:loc>
     </image:image>
-    <image:image>
-      <image:loc>https://smartindie.dev/assets/images/misc/TestimonialPfpCropped.jpg</image:loc>
-    </image:image>
   </url>
 </urlset>
 
