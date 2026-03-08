@@ -4,7 +4,22 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Smart Indie | Unity Version Control for Beginners: The Simple Setup That Saves Your Project</title>
-  <meta name="description" content="A simple Unity version control setup for beginners that saves your project and keeps work safe.">
+  <meta name="description" content="A beginner-friendly Unity version control setup that keeps your project safe, your repo clean, and your solo workflow much less fragile.">
+  <meta name="author" content="Kevin Bjorvand">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="Unity Version Control for Beginners: The Simple Setup That Saves Your Project">
+  <meta property="og:description" content="The simple Git and GitHub Desktop workflow I recommend to beginners so they stop losing work and stop fearing changes.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://smartindie.dev/articles/unity-version-control/">
+  <meta property="og:site_name" content="Smart Indie">
+  <meta property="og:image" content="https://smartindie.dev/assets/images/logos/SmartIndieLogo.png">
+  <meta property="article:published_time" content="2026-01-18">
+  <meta property="article:modified_time" content="2026-03-08">
+  <meta property="article:section" content="Unity basics">
+  <meta property="article:author" content="Kevin Bjorvand">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Unity Version Control for Beginners: The Simple Setup That Saves Your Project">
+  <meta name="twitter:description" content="A simple version control setup for solo Unity developers who want backup, confidence, and cleaner projects.">
   <link rel="canonical" href="https://smartindie.dev/articles/unity-version-control/">
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
@@ -13,6 +28,30 @@
   <link rel="manifest" href="/assets/favicon/site.webmanifest">
   <link rel="stylesheet" href="/assets/css/styles.css">
   <link rel="stylesheet" href="/assets/css/articles.css">
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Unity Version Control for Beginners: The Simple Setup That Saves Your Project",
+      "description": "A beginner-friendly Unity version control setup that keeps your project safe, your repo clean, and your solo workflow much less fragile.",
+      "image": "https://smartindie.dev/assets/images/logos/SmartIndieLogo.png",
+      "author": {
+        "@type": "Person",
+        "name": "Kevin Bjorvand"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Smart Indie"
+      },
+      "datePublished": "2026-01-18",
+      "dateModified": "2026-03-08",
+      "articleSection": "Unity basics",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://smartindie.dev/articles/unity-version-control/"
+      }
+    }
+  </script>
   <!-- MailerLite Universal -->
   <script src="/assets/js/mailerlite.js"></script>
   <!-- End MailerLite Universal -->
@@ -49,98 +88,150 @@
 
   <main>
     <section class="article-section" aria-labelledby="unity-version-control-title" data-reveal>
-      <article class="article-entry">
-        <p class="article-tag">Unity basics</p>
-        <h1 id="unity-version-control-title">Unity Version Control for Beginners: The Simple Setup That Saves Your Project</h1>
-        <p>Most beginners learn version control after they get burned. I did too. Something breaks, you don’t remember what you changed, and suddenly you’re digging through old folders like <code>Game_Final_FINAL_7</code>. Version control fixes that. It’s not a “team-only” thing. For a solo developer, it’s basically a time machine and a backup system in one.</p>
-        <p>The goal is not to become a Git expert. The goal is to stop losing work, stop being scared of making changes, and make it easy to go back to a working version when you mess something up (because you will, and that’s normal).</p>
-        <hr>
-        <h2>What version control actually does (in plain language)</h2>
-        <p>Version control gives you “save points” you can return to. Each save point includes exactly what changed and when. So instead of guessing which file broke your game, you can compare changes, undo specific commits, or just rewind to the last stable version.</p>
-        <p>For me, the biggest benefit was confidence. When I knew I could roll back, I started experimenting more. That’s when you learn faster.</p>
-        <hr>
-        <h2>The only Git actions you need at the start</h2>
-        <p>If you’re a beginner, you only need three concepts:</p>
-        <ul>
-          <li><strong>Commit</strong>: create a save point with a short message</li>
-          <li><strong>Push</strong>: upload your save points to GitHub (backup)</li>
-          <li><strong>Pull</strong>: download the latest save points to your PC</li>
-        </ul>
-        <p>That’s it. Everything else can come later.</p>
-        <hr>
-        <h2>The beginner setup I recommend (simple and safe)</h2>
-        <h3>1) Use GitHub Desktop (or another GUI) instead of the terminal</h3>
-        <p>You <em>can</em> use the terminal, but beginners often get stuck on Git commands instead of game dev. GitHub Desktop makes the basics easy: you can see changed files, write a commit message, and push with a button. If you want to learn terminal later, great, but don’t block yourself now.</p>
-        <h3>2) Create a repo for each game project</h3>
-        <p>Keep it clean: one repository per Unity project. It makes everything simpler and reduces the chance you accidentally track weird files.</p>
-        <h3>3) Add a Unity <code>.gitignore</code> immediately</h3>
-        <p>This is the most important part. Unity generates a lot of files that you should not commit. If you commit them, your repo becomes huge and messy, and you’ll run into pointless issues later.</p>
-        <p>A proper Unity <code>.gitignore</code> will ignore things like:</p>
-        <ul>
-          <li><code>Library/</code></li>
-          <li><code>Temp/</code></li>
-          <li><code>Obj/</code></li>
-          <li><code>Build/</code> (usually)</li>
-          <li>Logs and caches</li>
-        </ul>
-        <p>Those folders are generated by Unity and can be rebuilt on any machine. You don’t need them in Git. You want to commit the actual project assets and code, not the engine’s temporary output.</p>
-        <h3>4) Also ignore big generated files you don’t need</h3>
-        <p>Even with a Unity <code>.gitignore</code>, there are a few common “repo bloat” problems beginners hit.</p>
-        <p>If you generate big files that can be recreated, ignore them. Two common examples:</p>
-        <ul>
-          <li><strong>Lightmaps</strong> (if you bake lighting and it produces huge textures)</li>
-          <li><strong>Recorded gameplay footage</strong> or random exports you drop into the project folder</li>
-        </ul>
-        <p>The rule is simple: if it’s a large generated output and you can recreate it, don’t commit it. Keep your repo lean.</p>
-        <hr>
-        <h2>What you should commit (so your project actually works on another PC)</h2>
-        <p>When your <code>.gitignore</code> is correct, you generally <em>do</em> commit things like:</p>
-        <ul>
-          <li><code>Assets/</code> (scripts, prefabs, scenes, art you actually use)</li>
-          <li><code>Packages/</code> (package dependencies)</li>
-          <li><code>ProjectSettings/</code> (Unity project settings)</li>
-        </ul>
-        <p>If you commit those and ignore the generated folders, you can clone the repo on another PC, open the project, and Unity will rebuild everything it needs.</p>
-        <hr>
-        <h2>A workflow that actually fits beginner Unity projects</h2>
-        <p>Here’s the workflow I recommend because it’s simple and it prevents disasters.</p>
-        <h3>Commit when something works</h3>
-        <p>Not at the end of the day. Not after you finish a “big feature.” Commit when you reach a stable point, even if it’s small.</p>
-        <p>Examples of good commit moments:</p>
-        <ul>
-          <li>player movement works</li>
-          <li>you fixed a bug</li>
-          <li>the UI actually updates correctly</li>
-          <li>you added one enemy type and it behaves</li>
-        </ul>
-        <p>Small commits are easier to undo and easier to understand.</p>
-        <h3>Push at least once per session</h3>
-        <p>If GitHub is your backup, then pushing is what makes the backup real. If you commit but never push, you still only have one copy on your PC.</p>
-        <hr>
-        <h2>Common mistakes that waste a lot of time</h2>
-        <h3>Tracking the wrong folders</h3>
-        <p>If you accidentally commit <code>Library/</code> or other generated folders, your repo becomes slow and bloated. It also makes pulling changes more annoying.</p>
-        <h3>Treating Git like a “later problem”</h3>
-        <p>If you wait until the project is big, you’ll avoid using Git because setting it up will feel scary. Start early when the project is small.</p>
-        <h3>Making huge commits</h3>
-        <p>If one commit contains 200 changed files and “a bunch of stuff,” it becomes almost useless as a save point. Keep commits small and specific.</p>
-        <hr>
-        <h2>The real reason I push version control so hard</h2>
-        <p>Beginners quit projects because they hit chaos: bugs, broken scenes, messy folders, lost work, no clear way back. Version control doesn’t make you better at Unity, but it makes Unity less punishing. That means you stick around long enough to actually get good.</p>
-        <div class="article-cta">
-          <div>
-            <h3>SmartIndie</h3>
-            <p>In SmartIndie, I treat version control as a “finish your game” skill, not a nerdy extra. If you want a simple system for building, staying organized, and actually shipping small games without your project turning into chaos</p>
+      <div class="article-layout">
+        <article class="article-entry">
+          <header class="article-header">
+            <p class="article-tag">Unity basics</p>
+            <h1 id="unity-version-control-title">Unity Version Control for Beginners: The Simple Setup That Saves Your Project</h1>
+            <p class="article-lead">I think version control is one of the highest-leverage beginner habits in game development because it turns mistakes from disasters into normal, reversible events.</p>
+          </header>
+
+          <p>Most beginners learn version control after they get burned. I did too. Something breaks, you do not remember what changed, and suddenly you are digging through folders named <code>Game_Final_FINAL_7</code>. Version control fixes that. For a solo developer, it is not a team luxury. It is a time machine and a backup system.</p>
+          <p>The goal is not to become a Git wizard. The goal is to stop losing work, stop being scared of changes, and make it easy to return to a stable version when you break something.</p>
+
+          <hr>
+
+          <h2>What version control actually gives you</h2>
+          <p>Version control creates save points that are smarter than manual backups. Each save point explains what changed and when. That means you can compare versions, undo a bad change, or jump back to the last working state without guesswork.</p>
+          <p>For me, the biggest value was psychological. Once I trusted that I could roll back, I became more willing to experiment. That matters because fear makes beginners work slowly and avoid useful risks.</p>
+
+          <hr>
+
+          <h2>The only Git concepts I think beginners need at first</h2>
+          <ul>
+            <li><strong>Commit</strong>: create a save point with a short message</li>
+            <li><strong>Push</strong>: upload those save points to GitHub so the backup is real</li>
+            <li><strong>Pull</strong>: download the latest save points to your machine</li>
+          </ul>
+          <p>That is enough to start. You do not need branches, rebases, or command-line tricks to get the core value.</p>
+
+          <hr>
+
+          <h2>The beginner setup I recommend</h2>
+          <h3>Use GitHub Desktop or another GUI first</h3>
+          <p>You can learn terminal Git later. For beginners, a GUI removes a lot of accidental friction. You can see changed files, write a commit message, and push without memorizing commands. The point right now is reliability, not bragging rights.</p>
+
+          <h3>Keep one repository per game project</h3>
+          <p>Do not mix multiple games inside one repo. One Unity project should have one repository. It stays easier to reason about, easier to back up, and easier to rebuild on another machine.</p>
+
+          <h3>Add a Unity <code>.gitignore</code> immediately</h3>
+          <p>This is the part that saves beginners from repo chaos. Unity generates a lot of folders you should not track. The big ones are:</p>
+          <ul>
+            <li><code>Library/</code></li>
+            <li><code>Temp/</code></li>
+            <li><code>Obj/</code></li>
+            <li><code>Logs/</code></li>
+            <li><code>Build/</code> in most cases</li>
+          </ul>
+          <p>Those are generated outputs. They make repos bloated and annoying, and they can be rebuilt by Unity on another machine.</p>
+
+          <h3>Ignore other large generated files too</h3>
+          <p>If you produce files that can be recreated, do not track them. Common examples are baked lightmaps you can regenerate, random captured footage, or exports that only exist because they were convenient at the time. A lean repo is faster to work with and easier to trust.</p>
+
+          <hr>
+
+          <h2>What I do commit so the project actually survives</h2>
+          <p>When the ignore rules are correct, I commit the things that define the real project:</p>
+          <ul>
+            <li><code>Assets/</code></li>
+            <li><code>Packages/</code></li>
+            <li><code>ProjectSettings/</code></li>
+          </ul>
+          <p>That combination is what lets you clone the repo on another machine and open the project successfully.</p>
+
+          <hr>
+
+          <h2>The simple workflow that fits small Unity projects</h2>
+          <h3>Commit when something works</h3>
+          <p>I do not wait for the end of the day. I commit when I reach a stable point. Player movement works. The restart loop works. The UI updates correctly. One enemy type behaves. Small commits are easier to understand and easier to undo.</p>
+
+          <h3>Push every session</h3>
+          <p>If GitHub is your backup, pushing is what makes the backup real. A commit that lives only on your machine is still a fragile safety net.</p>
+
+          <h3>Write commit messages your future self can read</h3>
+          <p>"Fixed stuff" is not a useful checkpoint. "Add checkpoint respawn" or "Fix enemy patrol reset" is. You are not writing literature. You are leaving breadcrumbs for a stressed future version of yourself.</p>
+
+          <hr>
+
+          <h2>The mistakes that waste the most time</h2>
+          <ul>
+            <li>Tracking the wrong folders and bloating the repo</li>
+            <li>Waiting until the project is large before setting Git up</li>
+            <li>Making huge commits that mix unrelated changes together</li>
+            <li>Treating version control like a technical side quest instead of a shipping habit</li>
+          </ul>
+          <p>Version control does not make you better at Unity directly, but it makes Unity less punishing. That is a big deal. Beginners stick with things longer when the cost of mistakes is lower.</p>
+
+          <div class="article-cta">
+            <div>
+              <h2>Smart Indie</h2>
+              <p>Inside Smart Indie, I treat version control as a finish-your-game habit, not a nerdy bonus. It is part of building small projects safely enough that you keep going.</p>
+            </div>
+            <a class="button primary" href="https://go.smartindie.dev/s/website">Join Smart Indie</a>
           </div>
-          <a class="button primary" href="https://go.smartindie.dev/s/website">Join Smart Indie</a>
-        </div>
-      </article>
+        </article>
+
+        <aside class="article-sidebar" aria-label="Article details">
+          <div class="article-sidebar-card">
+            <p class="article-sidebar-title">Article details</p>
+            <dl class="article-meta-list">
+              <div>
+                <dt>Author</dt>
+                <dd>Kevin Bjorvand</dd>
+              </div>
+              <div>
+                <dt>Created</dt>
+                <dd><time datetime="2026-01-18">18 January 2026</time></dd>
+              </div>
+              <div>
+                <dt>Last edited</dt>
+                <dd><time datetime="2026-03-08">8 March 2026</time></dd>
+              </div>
+              <div>
+                <dt>Read time</dt>
+                <dd>5 min read</dd>
+              </div>
+              <div>
+                <dt>Best for</dt>
+                <dd>Unity beginners who want safer projects</dd>
+              </div>
+              <div>
+                <dt>Focus</dt>
+                <dd>Simple Git habits for solo developers</dd>
+              </div>
+            </dl>
+          </div>
+
+          <div class="article-sidebar-card">
+            <p class="article-sidebar-title">Main takeaway</p>
+            <p>Version control gives beginners enough safety to experiment, recover from mistakes, and keep their projects from turning into folder chaos.</p>
+          </div>
+
+          <div class="article-sidebar-card">
+            <p class="article-sidebar-title">Read next</p>
+            <div class="article-sidebar-list">
+              <a href="/articles/first-playable/">How I Build a First Playable Fast</a>
+              <a href="/articles/solo-game-dev-routine/">My Solo Game Dev Routine</a>
+            </div>
+          </div>
+        </aside>
+      </div>
     </section>
   </main>
 
   <footer>
-      <div class="footer-content">
-        <div>© Bjorvand Solutions 2026 • Company registration number: 836 135 652 (Norway)</div>
+    <div class="footer-content">
+      <div>&copy; Bjorvand Solutions 2026 &bull; Company registration number: 836 135 652 (Norway)</div>
       <div class="footer-links">
         <a href="/">Smart Indie</a>
         <a href="/games/">Games</a>
@@ -155,4 +246,3 @@
   <script src="/assets/js/global.js"></script>
 </body>
 </html>
-

@@ -4,7 +4,22 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Smart Indie | Scope Creep in Indie Games: How I Stop Feature Creep Before It Kills the Project</title>
-  <meta name="description" content="How to stop scope creep before it kills your indie game project with a simple core loop test and planning buckets.">
+  <meta name="description" content="Learn how I stop scope creep in indie games with a core loop filter, simple planning buckets, and rules that keep beginner projects finishable.">
+  <meta name="author" content="Kevin Bjorvand">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="Scope Creep in Indie Games: How I Stop Feature Creep Before It Kills the Project">
+  <meta property="og:description" content="My simple scope control system for keeping a first game small enough to finish and ship.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://smartindie.dev/articles/scope-creep/">
+  <meta property="og:site_name" content="Smart Indie">
+  <meta property="og:image" content="https://smartindie.dev/assets/images/logos/SmartIndieLogo.png">
+  <meta property="article:published_time" content="2026-01-18">
+  <meta property="article:modified_time" content="2026-03-08">
+  <meta property="article:section" content="Scope control">
+  <meta property="article:author" content="Kevin Bjorvand">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Scope Creep in Indie Games: How I Stop Feature Creep Before It Kills the Project">
+  <meta name="twitter:description" content="A practical scope control framework for indie game developers who want to finish a real first project.">
   <link rel="canonical" href="https://smartindie.dev/articles/scope-creep/">
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
@@ -13,6 +28,30 @@
   <link rel="manifest" href="/assets/favicon/site.webmanifest">
   <link rel="stylesheet" href="/assets/css/styles.css">
   <link rel="stylesheet" href="/assets/css/articles.css">
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Scope Creep in Indie Games: How I Stop Feature Creep Before It Kills the Project",
+      "description": "Learn how I stop scope creep in indie games with a core loop filter, simple planning buckets, and rules that keep beginner projects finishable.",
+      "image": "https://smartindie.dev/assets/images/logos/SmartIndieLogo.png",
+      "author": {
+        "@type": "Person",
+        "name": "Kevin Bjorvand"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Smart Indie"
+      },
+      "datePublished": "2026-01-18",
+      "dateModified": "2026-03-08",
+      "articleSection": "Scope control",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://smartindie.dev/articles/scope-creep/"
+      }
+    }
+  </script>
   <!-- MailerLite Universal -->
   <script src="/assets/js/mailerlite.js"></script>
   <!-- End MailerLite Universal -->
@@ -49,109 +88,142 @@
 
   <main>
     <section class="article-section" aria-labelledby="scope-creep-title" data-reveal>
-      <article class="article-entry">
-        <p class="article-tag">Scope control</p>
-        <h1 id="scope-creep-title">Scope Creep in Indie Games: How I Stop Feature Creep Before It Kills the Project</h1>
-        <p>Scope creep is when your game quietly turns into a long-term prison. It usually starts with something that sounds harmless: “I’ll just add a stamina system.” Then it becomes crafting, then a skill tree, then five enemy types, then a storyline, then a polished inventory UI. And suddenly the game you were supposed to finish in a month becomes a project you avoid opening.</p>
-        <p>If you’re trying to finish your first game, scope creep is one of the biggest reasons you won’t. Not because you’re weak, but because your brain is doing what it’s supposed to do: it’s trying to make the game better. The problem is that “better” usually means “bigger,” and bigger is what makes beginners quit.</p>
-        <hr>
-        <h2>Why scope creep happens (especially to beginners)</h2>
-        <p>Beginners often have two problems at the same time:</p>
-        <ol>
-          <li>You want the game to be good.</li>
-          <li>You don’t yet have a strong feeling for how long things take.</li>
-        </ol>
-        <p>So you choose an idea, start building, and then you keep adding “small” features that don’t feel small once you actually implement them. Each feature is another system, another set of bugs, another set of decisions. The project gets heavier, and your motivation starts leaking.</p>
-        <p>I’ve seen this pattern a lot, and I’ve done it myself. The first sign is usually this feeling: “I’m working, but I’m not getting closer to something playable.” That’s the moment you need a scope rule.</p>
-        <hr>
-        <h2>The Core Loop Test (my favorite way to cut features)</h2>
-        <p>Here’s the simplest test I know:</p>
-        <p><strong>If you can’t describe the fun in one sentence, your scope is already broken.</strong></p>
-        <p>Your core loop sentence should be something like:</p>
-        <ul>
-          <li>“Dodge threats using sonar pings while navigating a dark maze.”</li>
-          <li>“Move fast, collect upgrades, and chase a high score.”</li>
-          <li>“Survive waves by repositioning and using simple tools.”</li>
-        </ul>
-        <p>This sentence is not marketing. It’s a filter. Every feature has to earn its place by improving that sentence. If it doesn’t make the core loop more fun, clearer, or easier to feel, it gets cut.</p>
-        <p>That one sentence can save you months because it stops you from adding features “just because.”</p>
-        <hr>
-        <h2>The simple planning method that keeps projects finishable</h2>
-        <p>When I plan a beginner project, I split features into three buckets:</p>
-        <h3>Must (the game can ship with only this)</h3>
-        <p>This is the minimum version that still counts as a real game. For most beginner games, it’s things like:</p>
-        <ul>
-          <li>a playable core loop</li>
-          <li>a win or lose condition (or a clear end)</li>
-          <li>a start menu or restart flow</li>
-          <li>basic sound or feedback so it doesn’t feel dead</li>
-          <li>a build you can send to someone</li>
-        </ul>
-        <p>If you finish only this, you still win. You shipped.</p>
-        <h3>Nice (only if the Must list is done early)</h3>
-        <p>These are upgrades that improve the experience but aren’t required to release:</p>
-        <ul>
-          <li>one extra enemy type</li>
-          <li>better UI</li>
-          <li>more levels or variations</li>
-          <li>extra polish</li>
-        </ul>
-        <h3>Later (danger zone)</h3>
-        <p>This is where projects go to die. These are features that are cool but expensive:</p>
-        <ul>
-          <li>crafting</li>
-          <li>skill trees</li>
-          <li>procedural generation</li>
-          <li>open world anything</li>
-          <li>online multiplayer</li>
-        </ul>
-        <p>The rule that matters is this: nothing moves out of “Later” until the “Must” version is complete and playable.</p>
-        <p>This removes the constant decision fatigue. You don’t have to debate every idea. You just park it.</p>
-        <hr>
-        <h2>The best “first game” rule I’ve ever used</h2>
-        <p>Here’s a rule that I think beginners need to hear clearly:</p>
-        <p><strong>Your first game should be chosen for one thing: it must be realistic to finish.</strong></p>
-        <p>This is where a lot of people misunderstand the 80/20 idea. I like the 80/20 skill rule for the first game specifically, because the first win is everything. Your first game should mostly be made from skills you already have, with a small amount of new learning. That keeps it finishable.</p>
-        <p>But that rule is for the first game, not every game forever.</p>
-        <p>After you’ve shipped something, you can take bigger swings. You’ll have more confidence, better instincts, and more proof that you can finish. But for the first game, the goal is not “my dream game.” The goal is “a real finished game that proves I can ship.”</p>
-        <hr>
-        <h2>A practical way to stop scope creep mid-project</h2>
-        <p>If you’re already deep in a project and it’s getting too big, here’s what I do:</p>
-        <ol>
-          <li>Write the core loop sentence.</li>
-          <li>Make a “Must” list that creates a playable version in the smallest way possible.</li>
-          <li>Cut or postpone anything that doesn’t help you reach that playable version.</li>
-        </ol>
-        <p>This can feel painful because it feels like giving up. It’s not giving up. It’s trading fantasy progress for real progress.</p>
-        <p>Because shipping a small game teaches you more than half-building a big one.</p>
-        <hr>
-        <h2>How to know your scope is healthy</h2>
-        <p>Your scope is probably healthy if:</p>
-        <ul>
-          <li>you can describe the game in one sentence without adding a paragraph</li>
-          <li>you have a short Must list and a long Later list</li>
-          <li>you can imagine a playable build within a couple of weeks</li>
-        </ul>
-        <p>Your scope is probably unhealthy if:</p>
-        <ul>
-          <li>your feature list keeps growing every day</li>
-          <li>you keep redesigning systems instead of completing one loop</li>
-          <li>you can’t picture what “done” looks like</li>
-        </ul>
-        <div class="article-cta">
-          <div>
-            <h3>SmartIndie</h3>
-            <p>In SmartIndie, I help beginners build their first game with rules that protect them from scope creep. If you want a clear structure for picking a realistic first game, keeping the project small, and actually shipping</p>
+      <div class="article-layout">
+        <article class="article-entry">
+          <header class="article-header">
+            <p class="article-tag">Scope control</p>
+            <h1 id="scope-creep-title">Scope Creep in Indie Games: How I Stop Feature Creep Before It Kills the Project</h1>
+            <p class="article-lead">Scope creep usually looks harmless while it is happening. That is why I rely on simple rules, not optimism, to keep a project small enough to finish.</p>
+          </header>
+
+          <p>Scope creep is what happens when a game quietly turns into a prison sentence. It often starts with something that sounds small: "I will just add stamina." Then it becomes crafting, then upgrades, then more enemies, then story beats, then a cleaner inventory. Soon the game that was supposed to take a month becomes the project you avoid opening.</p>
+          <p>If you are trying to finish your first game, scope creep is one of the biggest reasons you will not. Not because you are weak, but because your brain keeps trying to improve the game by making it bigger.</p>
+
+          <hr>
+
+          <h2>Why beginners get hit by scope creep so hard</h2>
+          <p>Most beginners have two things happening at once:</p>
+          <ol>
+            <li>You want the game to be good.</li>
+            <li>You do not yet have a reliable feel for how long features take.</li>
+          </ol>
+          <p>That combination is brutal. Each new system sounds reasonable in isolation, but every system brings more code, more bugs, more design decisions, and more polish work. Eventually you are "working" without moving closer to something playable.</p>
+          <p>That is the moment I stop trusting my excitement and switch to a scope rule.</p>
+
+          <hr>
+
+          <h2>The Core Loop Test I use to cut features fast</h2>
+          <p>My favorite scope filter is brutally simple:</p>
+          <blockquote>If I cannot explain the fun in one sentence, the scope is already broken.</blockquote>
+          <p>The core loop sentence might look like this:</p>
+          <ul>
+            <li>"Dodge hazards, collect upgrades, and survive long enough to chase a high score."</li>
+            <li>"Use sonar pings to navigate danger in the dark."</li>
+            <li>"Reposition, attack, and survive short waves with simple tools."</li>
+          </ul>
+          <p>That sentence is not marketing copy. It is a filter. Every feature has to make that sentence more fun, clearer, or easier to feel. If it does not, it gets cut or parked.</p>
+
+          <hr>
+
+          <h2>The three buckets that keep my projects finishable</h2>
+          <p>When I plan a small game, I sort ideas into three buckets.</p>
+
+          <h3>Must</h3>
+          <p>This is the minimum version that still counts as a real game. For a beginner project, that usually means:</p>
+          <ul>
+            <li>a playable core loop</li>
+            <li>a clear win, lose, or restart condition</li>
+            <li>a basic menu or restart flow</li>
+            <li>enough sound or feedback that the game does not feel dead</li>
+            <li>a build I can send to another person</li>
+          </ul>
+          <p>If I finish only this list, that still counts as a win because I shipped.</p>
+
+          <h3>Nice</h3>
+          <p>These are upgrades that help the experience but are not required to release. Better UI, one extra enemy type, extra polish, more level variation. Fine additions, but only after the Must version is real.</p>
+
+          <h3>Later</h3>
+          <p>This is where a lot of first games go to die. Crafting, procedural generation, online multiplayer, open-world anything, skill trees. Cool ideas. Terrible early commitments.</p>
+          <p>The rule is simple: nothing leaves Later until Must is playable.</p>
+
+          <hr>
+
+          <h2>The first-game rule I trust most</h2>
+          <p>Your first game should be chosen for one reason above all others: it must be realistic to finish.</p>
+          <p>I like the 80/20 idea for first projects. About 80 percent of the project should rely on skills you already roughly understand. The remaining 20 percent can stretch you. That balance gives you enough novelty to learn without turning the whole project into a learning cliff.</p>
+          <p>Later, once you have shipped something, you can take bigger swings. But your first game should prove you can finish, not prove you can imagine a giant design document.</p>
+
+          <hr>
+
+          <h2>What I do when scope creep has already started</h2>
+          <ol>
+            <li>Write the core loop sentence.</li>
+            <li>Make a Must list that creates the smallest playable version.</li>
+            <li>Cut, postpone, or park anything that does not directly help that version exist.</li>
+          </ol>
+          <p>This feels painful because it feels like giving up on the cooler version. I do not see it that way anymore. I see it as trading fantasy progress for real progress.</p>
+          <p>Shipping a small game teaches more than half-building a huge one.</p>
+
+          <div class="article-cta">
+            <div>
+              <h2>Smart Indie</h2>
+              <p>Inside Smart Indie, I push hard on finishable scope because beginners do not need bigger dreams. They need a system that protects the first shipped game.</p>
+            </div>
+            <a class="button primary" href="https://go.smartindie.dev/s/website">Join Smart Indie</a>
           </div>
-          <a class="button primary" href="https://go.smartindie.dev/s/website">Join Smart Indie</a>
-        </div>
-      </article>
+        </article>
+
+        <aside class="article-sidebar" aria-label="Article details">
+          <div class="article-sidebar-card">
+            <p class="article-sidebar-title">Article details</p>
+            <dl class="article-meta-list">
+              <div>
+                <dt>Author</dt>
+                <dd>Kevin Bjorvand</dd>
+              </div>
+              <div>
+                <dt>Created</dt>
+                <dd><time datetime="2026-01-18">18 January 2026</time></dd>
+              </div>
+              <div>
+                <dt>Last edited</dt>
+                <dd><time datetime="2026-03-08">8 March 2026</time></dd>
+              </div>
+              <div>
+                <dt>Read time</dt>
+                <dd>5 min read</dd>
+              </div>
+              <div>
+                <dt>Best for</dt>
+                <dd>Beginners whose ideas keep expanding</dd>
+              </div>
+              <div>
+                <dt>Focus</dt>
+                <dd>Protecting a first project from feature creep</dd>
+              </div>
+            </dl>
+          </div>
+
+          <div class="article-sidebar-card">
+            <p class="article-sidebar-title">Main takeaway</p>
+            <p>A small shipped game beats a large half-built game, so every feature has to earn its place by strengthening the core loop.</p>
+          </div>
+
+          <div class="article-sidebar-card">
+            <p class="article-sidebar-title">Read next</p>
+            <div class="article-sidebar-list">
+              <a href="/articles/first-playable/">How I Build a First Playable Fast</a>
+              <a href="/articles/playtest-early/">Why I Playtest My Game Early</a>
+            </div>
+          </div>
+        </aside>
+      </div>
     </section>
   </main>
 
   <footer>
-      <div class="footer-content">
-        <div>© Bjorvand Solutions 2026 • Company registration number: 836 135 652 (Norway)</div>
+    <div class="footer-content">
+      <div>&copy; Bjorvand Solutions 2026 &bull; Company registration number: 836 135 652 (Norway)</div>
       <div class="footer-links">
         <a href="/">Smart Indie</a>
         <a href="/games/">Games</a>
@@ -166,4 +238,3 @@
   <script src="/assets/js/global.js"></script>
 </body>
 </html>
-

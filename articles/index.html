@@ -3,8 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Smart Indie | Articles</title>
-  <meta name="description" content="Read Smart Indie articles on finishing your first game, escaping tutorial hell, and shipping with confidence.">
+  <title>Smart Indie | Articles for Solo Game Developers Who Want to Ship</title>
+  <meta name="description" content="Read short, practical Smart Indie articles on tutorial hell, first playable builds, playtesting, version control, scope creep, and solo game dev consistency.">
+  <meta name="author" content="Kevin Bjorvand">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="Smart Indie | Articles for Solo Game Developers Who Want to Ship">
+  <meta property="og:description" content="Short, practical articles on tutorial hell, first playable builds, playtesting, version control, scope creep, and staying consistent as a solo game developer.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://smartindie.dev/articles/">
+  <meta property="og:site_name" content="Smart Indie">
+  <meta property="og:image" content="https://smartindie.dev/assets/images/logos/SmartIndieLogo.png">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Smart Indie | Articles for Solo Game Developers Who Want to Ship">
+  <meta name="twitter:description" content="Short, practical articles on shipping your first game, staying focused, and learning solo game development without drowning in noise.">
   <link rel="canonical" href="https://smartindie.dev/articles/">
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
@@ -13,6 +24,60 @@
   <link rel="manifest" href="/assets/favicon/site.webmanifest">
   <link rel="stylesheet" href="/assets/css/styles.css">
   <link rel="stylesheet" href="/assets/css/articles.css">
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "name": "Smart Indie Articles",
+      "description": "Short, practical articles for solo game developers who want to finish games, learn faster, and ship with confidence.",
+      "url": "https://smartindie.dev/articles/",
+      "author": {
+        "@type": "Person",
+        "name": "Kevin Bjorvand"
+      },
+      "mainEntity": {
+        "@type": "ItemList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "url": "https://smartindie.dev/articles/first-playable/",
+            "name": "How I Build a First Playable Fast: The Solo Game Dev Rule That Keeps Me Shipping"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "url": "https://smartindie.dev/articles/playtest-early/",
+            "name": "Why I Playtest My Game Early: The Fastest Way I Find Boring Mechanics"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "url": "https://smartindie.dev/articles/solo-game-dev-routine/",
+            "name": "My Solo Game Dev Routine: How I Stay Consistent Without Burning Out"
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "url": "https://smartindie.dev/articles/tutorial-hell/",
+            "name": "How I Escaped Tutorial Hell in Game Development (and How You Can Too)"
+          },
+          {
+            "@type": "ListItem",
+            "position": 5,
+            "url": "https://smartindie.dev/articles/unity-version-control/",
+            "name": "Unity Version Control for Beginners: The Simple Setup That Saves Your Project"
+          },
+          {
+            "@type": "ListItem",
+            "position": 6,
+            "url": "https://smartindie.dev/articles/scope-creep/",
+            "name": "Scope Creep in Indie Games: How I Stop Feature Creep Before It Kills the Project"
+          }
+        ]
+      }
+    }
+  </script>
   <!-- MailerLite Universal -->
   <script src="/assets/js/mailerlite.js"></script>
   <!-- End MailerLite Universal -->
@@ -50,37 +115,93 @@
   <main>
     <section class="articles-hero" aria-labelledby="articles-title" data-reveal>
       <div class="articles-hero-content">
-        <h1 id="articles-title">Articles that helps you ship</h1>
+        <h1 id="articles-title">Articles that help you ship</h1>
+        <p class="hero-sub">Short, practical reads for solo developers who want to finish their first games, stop drifting, and build better habits without turning game dev into a second full-time job.</p>
+      </div>
+      <div class="articles-hero-card">
+        <h2>What you will find here</h2>
+        <ul>
+          <li>Beginner-friendly advice rooted in real shipping constraints</li>
+          <li>Personal lessons with clear next steps, not vague motivation</li>
+          <li>Topics that protect momentum: scope, routine, playtesting, and learning</li>
+        </ul>
       </div>
     </section>
 
     <section id="article-list" class="article-list" aria-label="Article previews" data-reveal>
       <div class="article-grid">
         <article class="article-card">
-          <p class="article-tag">Tutorial momentum</p>
-          <h3>How I Escaped “Tutorial Hell” in Game Development (and You Can Too)</h3>
-          <p>Use this 3-rule system to stop passively watching and start building with confidence.</p>
-          <a class="article-link" href="/articles/tutorial-hell/">Read article →</a>
+          <p class="article-tag">Shipping habit</p>
+          <div class="article-card-meta">
+            <span>8 March 2026</span>
+            <span>4 min read</span>
+          </div>
+          <h2>How I Build a First Playable Fast: The Solo Game Dev Rule That Keeps Me Shipping</h2>
+          <p>The rule I use to turn vague ideas into fast playable builds before perfectionism gets a vote.</p>
+          <a class="article-link" href="/articles/first-playable/">Read article -&gt;</a>
         </article>
+
+        <article class="article-card">
+          <p class="article-tag">Playtesting</p>
+          <div class="article-card-meta">
+            <span>8 March 2026</span>
+            <span>4 min read</span>
+          </div>
+          <h2>Why I Playtest My Game Early: The Fastest Way I Find Boring Mechanics</h2>
+          <p>My lightweight playtesting process for catching boring loops, confusing UI, and bad assumptions early.</p>
+          <a class="article-link" href="/articles/playtest-early/">Read article -&gt;</a>
+        </article>
+
+        <article class="article-card">
+          <p class="article-tag">Consistency</p>
+          <div class="article-card-meta">
+            <span>8 March 2026</span>
+            <span>4 min read</span>
+          </div>
+          <h2>My Solo Game Dev Routine: How I Stay Consistent Without Burning Out</h2>
+          <p>A simple weekly routine that helps me make steady progress even when life is crowded and motivation is unstable.</p>
+          <a class="article-link" href="/articles/solo-game-dev-routine/">Read article -&gt;</a>
+        </article>
+
+        <article class="article-card">
+          <p class="article-tag">Tutorial momentum</p>
+          <div class="article-card-meta">
+            <span>18 January 2026</span>
+            <span>4 min read</span>
+          </div>
+          <h2>How I Escaped Tutorial Hell in Game Development (and How You Can Too)</h2>
+          <p>The mindset shift and small-project rules that helped me stop consuming and start building.</p>
+          <a class="article-link" href="/articles/tutorial-hell/">Read article -&gt;</a>
+        </article>
+
         <article class="article-card">
           <p class="article-tag">Unity basics</p>
-          <h3>Unity Version Control for Beginners: The Simple Setup That Saves Your Project</h3>
-          <p>A simple version control setup that protects your Unity project without overwhelming you.</p>
-          <a class="article-link" href="/articles/unity-version-control/">Read article →</a>
+          <div class="article-card-meta">
+            <span>18 January 2026</span>
+            <span>5 min read</span>
+          </div>
+          <h2>Unity Version Control for Beginners: The Simple Setup That Saves Your Project</h2>
+          <p>A beginner-safe Git workflow that protects your project, keeps your repo lean, and makes experimentation less scary.</p>
+          <a class="article-link" href="/articles/unity-version-control/">Read article -&gt;</a>
         </article>
+
         <article class="article-card">
           <p class="article-tag">Scope control</p>
-          <h3>Scope Creep in Indie Games: How I Stop Feature Creep Before It Kills the Project</h3>
-          <p>Stop runaway feature lists with a core loop sentence and clear scope buckets.</p>
-          <a class="article-link" href="/articles/scope-creep/">Read article →</a>
+          <div class="article-card-meta">
+            <span>18 January 2026</span>
+            <span>5 min read</span>
+          </div>
+          <h2>Scope Creep in Indie Games: How I Stop Feature Creep Before It Kills the Project</h2>
+          <p>My simple scope filter for protecting the core loop and shipping the small version before the fantasy version.</p>
+          <a class="article-link" href="/articles/scope-creep/">Read article -&gt;</a>
         </article>
       </div>
     </section>
   </main>
 
   <footer>
-      <div class="footer-content">
-        <div>© Bjorvand Solutions 2026 • Company registration number: 836 135 652 (Norway)</div>
+    <div class="footer-content">
+      <div>&copy; Bjorvand Solutions 2026 &bull; Company registration number: 836 135 652 (Norway)</div>
       <div class="footer-links">
         <a href="/">Smart Indie</a>
         <a href="/games/">Games</a>
@@ -95,4 +216,3 @@
   <script src="/assets/js/global.js"></script>
 </body>
 </html>
-
