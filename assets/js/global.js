@@ -47,3 +47,37 @@ if (revealElements.length > 0) {
     observer.observe(element);
   });
 }
+
+document.querySelectorAll('[data-path-picker]').forEach(picker => {
+  const tabs = picker.querySelectorAll('[data-path-target]');
+  const panels = picker.querySelectorAll('[data-path-panel]');
+
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      const target = tab.getAttribute('data-path-target');
+
+      tabs.forEach(item => {
+        const isActive = item === tab;
+        item.classList.toggle('active', isActive);
+        item.setAttribute('aria-selected', String(isActive));
+      });
+
+      panels.forEach(panel => {
+        panel.classList.toggle('active', panel.getAttribute('data-path-panel') === target);
+      });
+    });
+  });
+});
+
+document.querySelectorAll('[data-home-checklist]').forEach(checklist => {
+  const boxes = checklist.querySelectorAll('input[type="checkbox"]');
+  const count = checklist.querySelector('[data-check-count]');
+
+  function updateCount() {
+    if (!count) return;
+    count.textContent = String([...boxes].filter(box => box.checked).length);
+  }
+
+  boxes.forEach(box => box.addEventListener('change', updateCount));
+  updateCount();
+});
